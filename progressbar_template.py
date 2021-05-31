@@ -6,6 +6,7 @@ import time
 
 demo = tk.Tk()
 
+
 def start_thread():
     start['state'] = 'disabled'
     pb.start()
@@ -13,13 +14,16 @@ def start_thread():
     thread.start()
     monitor(thread)
 
+
 # def stop_process():
 #     pb.stop()
 #     pb_var.set(0)
 #     label['text'] = 'Stopped'
 
+
 def test(num=5):
     time.sleep(num)
+
 
 def monitor(thread, count=0):
     """ Monitor the download thread """
@@ -34,6 +38,7 @@ def monitor(thread, count=0):
         pb_var.set(0)
         pb.stop()
         start['state'] = 'normal'
+
 
 pb_var = tk.StringVar()
 
